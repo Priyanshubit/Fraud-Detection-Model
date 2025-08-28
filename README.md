@@ -47,3 +47,33 @@ We worked with a **large-scale dataset (6.3M+ transactions, 470MB)** to identify
    - Metrics: **Precision, Recall, F1-score, ROC-AUC**  
    - Tuned thresholds to maximize **fraud recall**  
 
+## 🚀 Results  
+- **High recall** for fraud detection (catching more fraudulent cases)  
+- XGBoost performed best with **balanced precision & recall**  
+- Identified key fraud indicators: transaction type, amount, balance inconsistencies  
+
+## 🔑 Key Learnings  
+- Importance of **feature engineering** in fraud detection  
+- Handling **imbalanced data** significantly improves recall  
+- Business validation of fraud rules (large transfers flagged automatically)  
+
+## 🖼️ Visualizations  
+📊 Fraud distribution, transaction types, correlation heatmaps, and feature importance plots are included in the `notebooks/` folder.  
+
+## 🧰 Tech Stack  
+- **Python** 🐍  
+- **Pandas, Numpy** (Data wrangling)  
+- **Matplotlib, Seaborn** (EDA & Visualization)  
+- **Scikit-learn** (ML models & evaluation)  
+- **XGBoost** (Boosted tree model)  
+- **Imbalanced-learn** (SMOTE handling)  
+
+## 📌 Future Scope  
+- Deploy model using **Streamlit / Flask** 🌐  
+- Real-time fraud detection pipeline with **Apache Kafka** ⚡  
+- Further optimization with **Deep Learning (LSTM on sequential data)**  
+
+---
+
+✨ If you like this project, give it a ⭐ and check out my other work!  
+
