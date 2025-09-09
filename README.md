@@ -23,7 +23,6 @@ We worked with a **large-scale dataset (6.3M+ transactions, 470MB)** to identify
   - `isFraud` → Fraudulent transactions (target)  
   - `isFlaggedFraud` → Transactions flagged over 200k  
 
-📁 Dataset Source: Provided by [Accredian Case Study]  
 
 ## 🛠️ Workflow  
 1. **Data Cleaning** 🧹  
