@@ -67,6 +67,18 @@ We worked with a **large-scale dataset (6.3M+ transactions, 470MB)** to identify
 - **XGBoost** (Boosted tree model)  
 - **Imbalanced-learn** (SMOTE handling)  
 
+## 📊 Final Workflow Summary
+
+The fraud detection workflow was designed to handle a highly imbalanced dataset and optimize model performance while maintaining interpretability. The process began with data cleaning and feature engineering, including the creation of amount_capped, amount_log, and is_amount_outlier to address extreme transaction values and skewed distributions. Outliers were carefully analyzed and transformed rather than removed to preserve meaningful patterns in fraud behavior.
+
+Next, the dataset was split into training and testing sets using stratified sampling to maintain the original class distribution. Given the severe class imbalance (fraud cases were <0.1% of all transactions), SMOTE (Synthetic Minority Over-sampling Technique) was applied to the training set to generate synthetic fraud examples, ensuring the model could learn fraud patterns effectively.
+
+Categorical variables, specifically type, were encoded numerically, and the data was prepared for tree-based modeling, requiring no scaling. An XGBoost classifier was trained on the balanced dataset, taking advantage of its ability to handle large-scale imbalanced datasets and complex non-linear relationships.
+
+Following training, model evaluation was performed using ROC-AUC, confusion matrices, precision, recall, and F1-score. Threshold tuning was then conducted to optimize the classification threshold (~0.9985) for maximizing the F1-score, striking a balance between minimizing false positives and maintaining high fraud detection rates. Comparison of the default vs. tuned thresholds highlighted the importance of this step, as false positives decreased drastically while retaining strong recall.
+
+Finally, feature importance analysis revealed that the most predictive feature was newbalanceOrig, indicating that changes in the sender’s balance after a transaction are the primary signal for fraud detection, followed by oldbalanceOrg and transaction type. The workflow ensures a robust, explainable, and high-performing model suitable for deployment in real-world fraud detection systems.
+
 ## 📌 Future Scope  
 - Deploy model using **Streamlit / Flask** 🌐  
 - Real-time fraud detection pipeline with **Apache Kafka** ⚡  
