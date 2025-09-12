@@ -1,3 +1,8 @@
+# Fraud-Detection-Model
+This project focuses on proactive fraud detection for a financial company using Machine Learning models.  I worked with a large-scale dataset (6.3M+ transactions, 470MB) to identify fraudulent patterns in CASH-OUT &amp; TRANSFER transactions.  
+
+
+# 🚨 Fraud Detection in Financial Transactions  
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)  
 ![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-yellow?logo=pandas)  
